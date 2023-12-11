@@ -1,5 +1,10 @@
+body {
+   
+    background-color: #000;
+    color: #fff;
+}
 main > .container {
-    padding: 70px 15px 20px;
+    padding: 10px 15px 20px;
 }
 
 .footer {
@@ -7,17 +12,22 @@ main > .container {
     font-size: .9em;
     height: 60px;
 }
-
+.texto-blanco{
+    color: white;
+}
 .footer > .container {
     padding-right: 15px;
     padding-left: 15px;
 }
-
+/*color*/
 .not-set {
     color: #c55;
     font-style: italic;
 }
-
+/*css para la seccion Inicial*/
+.colorNav .navbar-dark {
+    background-color: #800080; /* Color morado */
+}
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
     content: '';
@@ -57,6 +67,7 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
 
 /* align the logout "link" (button in form) of the navbar */
 .nav li > form > button.logout {

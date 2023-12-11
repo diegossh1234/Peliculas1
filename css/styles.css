@@ -1,0 +1,12 @@
+/*css para la seccion Inicial*/
+.Inicio {
+    background-image: url("../imagenes/Fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20% 0;
+    opacity: 85%;
+    border-bottom: 7px solid rgb(239, 184, 16);
+    overflow: hidden;/* Evita el desbordamiento del contenido */
+  }

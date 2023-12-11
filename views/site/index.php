@@ -1,53 +1,63 @@
 <?php
+use yii\db\Query;
 
 /** @var yii\web\View $this */
 
 $this->title = 'My Yii Application';
+
+// Obtener el nombre del género
+$generos = (new Query())
+    ->select('gen_nombre')
+    ->from('genero')
+    ->column();
 ?>
-<div class="site-index">
+<?php $this->registerCssFile('@web/css/styles.css'); ?>
 
-    <div class="jumbotron text-center bg-transparent mt-5 mb-5">
-        <h1 class="display-4">Grupo 6</h1>
+</header>
+  
+<section class="Inicio text-centro">
+    <h1 class="aspecto-h1 animacionh1 ">CineLibre</h1>
+    <h2 class="aspecto-h2 animacionh2">Donde cada historia cobra vida</h2>
+</section>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+<div class="jumbotron text-center bg-transparent mt-5 mb-5">
+    <h1 class="display-4">Ven y Disfruta</h1>
+    <p class="lead">
+        ¡Sumérgete en un mundo de emociones! Descubre la magia del cine en nuestra página de Películas. 🎬✨
+    </p>
+</div>
 
-        <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4 mb-3">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4 mb-3">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-outline-secondary" href="https://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+<div class="main-container">
+    <div class="info-container">
+        <div class="data">
+            <p class="letra_genero1">Géneros:</p>
+            <div>
+                <ul>
+                    <?php foreach ($generos as $genero): ?>
+                        <li class="letra_genero"><?= $genero ?></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </div>
-
     </div>
+
+    <div class="extra-info">
+        <h2 class="letra_genero">Una variedad de Series y Películas</h2>
+        <div class="carousel">
+            <div class="slides">
+                <img src="../imagenes/imagen1.jpg" alt="Imagen 1">
+                <img src="../imagenes/imagen2.jpg" alt="Imagen 2">
+                <img src="../imagenes/imagen3.jpg" alt="Imagen 3">
+                <img src="../imagenes/imagen4.jpg" alt="Imagen 4">
+                <img src="../imagenes/imagen5.jpg" alt="Imagen 5">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron text-center bg-transparent mt-5 mb-5">
+    <h1 class="display-4">Información</h1>
+    <p class="lead">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, eligendi vel? Illo magnam, voluptatibus eveniet id vel adipisci harum eos possimus optio quod a. Sequi veniam in at dolores ipsam tenetur fugiat ipsum excepturi molestias reprehenderit nihil accusamus ullam suscipit ut quaerat quisquam magnam officia, architecto magni harum dolor optio modi! Nam maxime quae delectus repellendus accusantium eaque in, voluptas provident enim dolores corporis odio veniam harum optio totam ea, velit iste omnis nobis. Voluptatibus vitae quidem amet magnam earum nisi eius id. Minus ab omnis, culpa voluptates consequuntur quasi corporis at ad, saepe voluptatibus enim! Tenetur rem reprehenderit pariatur.
+    </p>
 </div>
